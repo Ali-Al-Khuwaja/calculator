@@ -1,0 +1,29 @@
+#calculatorContainer{
+    display: flex;
+    justify-content: center;
+}
+#calculatorBox{
+    width: 300px;
+}
+.screen{
+    background-color: #EAFFD0;
+}
+body{
+    background-color: #F38181;
+    margin: 0%;
+}
+.buttonsLayout{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    
+}
+button{
+    background-color: #95E1D3;
+    border: 0;
+    width: 71px;
+    height: 70px;
+    margin: 2px;
+    border-radius: 10px;
+
+}
