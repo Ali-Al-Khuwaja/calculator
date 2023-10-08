@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:80px;
+    margin:70px;
 }
 #calculatorBox{
     width: 300px;
@@ -16,6 +16,10 @@
 }
 .screen{
     background-color: #EAFFD0;
+    height: 75px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 body{
     background-color: #F38181;
