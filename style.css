@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:70px;
+    margin:60px;
 }
 #calculatorBox{
     width: 300px;
@@ -24,6 +24,7 @@
 body{
     background-color: #F38181;
     margin: 0%;
+    font-size: 20px;
 }
 .buttonsLayout{
     display: flex;

@@ -1,3 +1,4 @@
+
 const a = '';
 const b = '';
 const operator = '';
@@ -25,10 +26,35 @@ const screen = document.querySelector('.screen');
 // const zero = document.querySelector('#zero');
 
 // show what i click on calculator screen code block 
-let oldNumberOnScreen = "";
+let oldNumberOnScreen = '';
+let newValue = '';
+let cleared = false;
 function showNumberOnScreen(number){
-    const newValue = number+oldNumberOnScreen;
-    oldNumberOnScreen = newValue;
-    debugger
-    screen.innerHTML = newValue;
+    if(cleared===false){
+        newValue = number+oldNumberOnScreen;
+        oldNumberOnScreen = newValue;
+        screen.textContent = newValue; //display on screen entered numbers
+    }else{
+        oldNumberOnScreen = ''; // to clear what the stored values before clearing the display
+        newValue = number+oldNumberOnScreen;
+        oldNumberOnScreen = newValue;
+        screen.textContent = newValue;
+        cleared= false;
+    }
+}
+
+
+function clearScreen(){
+    cleared = true;
+    screen.textContent='';
+}
+let deletionChecker = false;
+function deleteLastNumber(){
+    if(deletionChecker===false){
+        let afterDelete = newValue.split("");
+        afterDelete.pop();
+        afterDelete = afterDelete.join('');
+        newValue = '';
+        screen.textContent = afterDelete;
+    }   
 }
