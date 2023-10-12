@@ -27,18 +27,18 @@ const screen = document.querySelector('.screen');
 
 // show what i click on calculator screen code block 
 let oldNumberOnScreen = '';
-let newValue = '';
+let newNumberOnScreen = '';
 let cleared = false;
 function showNumberOnScreen(number){
     if(cleared===false){
-        newValue = number+oldNumberOnScreen;
-        oldNumberOnScreen = newValue;
-        screen.textContent = newValue; //display on screen entered numbers
+        newNumberOnScreen = number+oldNumberOnScreen;
+        screen.textContent = newNumberOnScreen; //display on screen entered numbers
+        oldNumberOnScreen = newNumberOnScreen;
     }else{
         oldNumberOnScreen = ''; // to clear what the stored values before clearing the display
-        newValue = number+oldNumberOnScreen;
-        oldNumberOnScreen = newValue;
-        screen.textContent = newValue;
+        newNumberOnScreen = number+oldNumberOnScreen;
+        oldNumberOnScreen = newNumberOnScreen;
+        screen.textContent = newNumberOnScreen;
         cleared= false;
     }
 }
@@ -48,13 +48,13 @@ function clearScreen(){
     cleared = true;
     screen.textContent='';
 }
-let deletionChecker = false;
+let delChecker = false;
+afterDelete = '';
 function deleteLastNumber(){
-    if(deletionChecker===false){
-        let afterDelete = newValue.split("");
-        afterDelete.pop();
-        afterDelete = afterDelete.join('');
-        newValue = '';
-        screen.textContent = afterDelete;
-    }   
+    delChecker = true;
+    afterDelete = newNumberOnScreen.split("");
+    afterDelete.pop();
+    afterDelete = afterDelete.join('');
+    newNumberOnScreen = afterDelete;
+    screen.textContent = afterDelete;
 }
