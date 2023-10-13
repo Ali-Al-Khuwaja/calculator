@@ -31,15 +31,23 @@ let newNumberOnScreen = '';
 let cleared = false;
 function showNumberOnScreen(number){
     if(cleared===false){
-        newNumberOnScreen = number+oldNumberOnScreen;
-        screen.textContent = newNumberOnScreen; //display on screen entered numbers
-        oldNumberOnScreen = newNumberOnScreen;
-    }else{
-        oldNumberOnScreen = ''; // to clear what the stored values before clearing the display
+        if(delChecker===false){
+            newNumberOnScreen = number+oldNumberOnScreen;
+            screen.textContent = newNumberOnScreen; //display on screen entered numbers
+            oldNumberOnScreen = newNumberOnScreen;
+        }else if(delChecker===true){
+            delChecker = false;            
+            newNumberOnScreen = '';
+            newNumberOnScreen = number + afterDelete ;
+            oldNumberOnScreen = newNumberOnScreen;
+            screen.textContent = newNumberOnScreen;
+        }
+    }else if(cleared===true){
         newNumberOnScreen = number+oldNumberOnScreen;
         oldNumberOnScreen = newNumberOnScreen;
         screen.textContent = newNumberOnScreen;
         cleared= false;
+        delChecker=false;
     }
 }
 
@@ -47,6 +55,8 @@ function showNumberOnScreen(number){
 function clearScreen(){
     cleared = true;
     screen.textContent='';
+    oldNumberOnScreen = '';
+    newNumberOnScreen = '';
 }
 let delChecker = false;
 afterDelete = '';
