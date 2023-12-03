@@ -16,29 +16,29 @@
                 </h2>
             </div>
             <div class="buttonsLayout">
-                <button onclick="clearScreen()">ac</button>
+                <button onclick="clearScreen()">C</button>
                 <button onclick="deleteLastNumber()">del</button>
-                <button>%</button>
-                <button>+</button>
+                <button class="operatorButtons">%</button>
+                <button class="operatorButtons" onclick="calculatingProcessPartOne(1)">+</button>
                 
                 <button id="one" class="numbers" onclick="showNumberOnScreen(1)">1</button>
                 <button id="two" class="number" onclick="showNumberOnScreen(2)">2</button>
                 <button id="three" class="numbers" onclick="showNumberOnScreen(3)">3</button>
-                <button>x</button>
+                <button class="operatorButtons" onclick="calculatingProcessPartOne(2)">x</button>
                 
                 <button id="four" class="numbers" onclick="showNumberOnScreen(4)">4</button>
                 <button id="five" class="numbers" onclick="showNumberOnScreen(5)">5</button>
                 <button id="six" class="number" onclick="showNumberOnScreen(6)">6</button>
-                <button>÷</button>
+                <button class="operatorButtons" onclick="calculatingProcessPartOne(3)">÷</button>
 
                 <button id="seven" class="numbers" onclick="showNumberOnScreen(7)">7</button>
                 <button id="eight" class="numbers" onclick="showNumberOnScreen(8)">8</button>
                 <button id="nine" class="numbers" onclick="showNumberOnScreen(9)">9</button>
-                <button>-</button>
+                <button class="operatorButtons" onclick="calculatingProcessPartOne(4)">-</button>
 
-                <button id="zero" class="numbers" onclick="showNumberOnScreen(1)">0</button>
+                <button id="zero" class="numbers" onclick="showNumberOnScreen(0)">0</button>
                 <button>.</button>
-                <button id="bigButton">=</button>
+                <button id="bigButton" class="operatorButtons" onclick="calculatingProcessPartTwo()">=</button>
             </div>
         </div>
     </div>
