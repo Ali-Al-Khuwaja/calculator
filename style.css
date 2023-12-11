@@ -1,0 +1,42 @@
+#calculatorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:60px;
+}
+#calculatorBox{
+    width: 300px;
+    background-color: #FCE38A;
+    border-radius: 10px;
+    padding: 30px;
+}
+#bigButton{
+    flex-grow: 1;
+    flex-basis: 45%;
+}
+.screen{
+    background-color: #EAFFD0;
+    height: 75px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+body{
+    background-color: #F38181;
+    margin: 0%;
+    font-size: 20px;
+}
+.buttonsLayout{
+    display: flex;
+    flex-wrap: wrap;    
+}
+button{
+    background-color: #95E1D3;
+    border: none;
+    width: 20%;
+    height: 70px;
+    margin: 2px;
+    border-radius: 10px;
+    flex-grow: 1; /* this will stretch the 20% to be perfect 25% */
+}
+/*  */
