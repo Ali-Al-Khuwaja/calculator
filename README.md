@@ -7,3 +7,4 @@ problem 2 : the operator act as equals after the = button have been pressed , it
 problem 3 : the user should not continue the operation if he clicks the = button 
 problem 4 : there is no keyboard support 
 problem 5 : the operator buttons have to be a unique color
+problem 6 : there is no minus support
