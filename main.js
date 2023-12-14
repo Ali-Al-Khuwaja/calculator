@@ -1,5 +1,4 @@
 // equation  variables
-// 1 = true  , 0 = false , basic cs 
 let a = '';
 let b = '';
 let c = '';
@@ -153,7 +152,6 @@ function calculatingProcessPartTwo(normalMode){
             operator = operatorHistory[1];
             operate(a,operator,b); 
         } 
-        // i found out that i'm 50% done because this is not reliable
         else if(counter===1){
             b=screen.textContent;
             operator
@@ -172,5 +170,8 @@ function calculatingProcessPartTwo(normalMode){
 const equalsButton = document.querySelector('#bigButton');
 equalsButton.addEventListener('click',()=>{
     calculatingProcessPartTwo(1);
+    let result = screen.textContent;
+    clearScreen();
+    screen.textContent = result;
 });
 
